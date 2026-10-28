@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1500" viewBox="0 0 2400 1500" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">C1 software-only control flow with a resettable no-command path</title>
+  <desc id="diagram-desc">A software-only C1 flow with separate synthetic membrane and classifier inputs. Each trial clears drive, ring position and phases, and clock before classification. The membrane event and a known accepted named classifier response meet at an AND gate. Rejected, unknown, malformed, missing, or exceptional classifier output becomes NO-COMMAND with zero drive; a separate path sends zero drive to the software scheduler. Accepted responses map to drive and update an in-memory 64-site phase ring on software-clock ticks. The readout derives values from the ring, not independent sensing. V1 per-class rates are SUPERSEDED BY A PAIRING BUG. Corrected v2 separates valid-command outcomes from unfamiliar/absent-command outcomes. The worst valid-command condition is within-tolerance colluding, 38/160 (23.8%; 95% paired-seed-cluster interval 18.1–30.0%). All six unfamiliar/absent cells are 0/40, each with a 95% Wilson upper bound of 8.8%; zero observed is not zero risk. This is not safety validation or a safety guarantee; no biological brain, heartbeat, neural/ECG input, hardware, force, or physical movement is implemented or measured.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#174A78"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9A4B00"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .title { font-size: 48px; font-weight: 700; }
+      .subtitle { font-size: 24px; fill: #34495E; }
+      .section { font-size: 26px; font-weight: 700; letter-spacing: .4px; }
+      .box-title { font-size: 28px; font-weight: 700; }
+      .body { font-size: 23px; }
+      .small { font-size: 20px; }
+      .tiny { font-size: 18px; }
+      .bold { font-weight: 700; }
+      .muted { fill: #4D5D6D; }
+      .node { fill: #FFFFFF; stroke: #38536B; stroke-width: 3; }
+      .input { fill: #F0F6FC; stroke: #174A78; stroke-width: 3; }
+      .gate { fill: #FFF4DF; stroke: #805300; stroke-width: 4; }
+      .software-line { fill: none; stroke: #174A78; stroke-width: 5; marker-end: url(#arrow-blue); }
+      .self-line { fill: none; stroke: #9A4B00; stroke-width: 5; stroke-dasharray: 13 9; marker-end: url(#arrow-orange); }
+      .card { fill: #FFFFFF; stroke: #B8C4CF; stroke-width: 2.5; }
+      .failure-card { fill: #FFFDFD; stroke: #9E2A2B; stroke-width: 3; }
+      .analogy-card { fill: #F1F3F5; stroke: #697784; stroke-width: 3; stroke-dasharray: 12 8; }
+    </style>
+  </defs>
+
+  <rect width="2400" height="1500" fill="#F7F9FB"/>
+  <text x="60" y="68" class="title">C1 control flow: a software-only toy integration</text>
+  <text x="60" y="112" class="subtitle">Separate inputs → permission + command classification → resettable zero-command branch → software-timed ring</text>
+  <rect x="60" y="140" width="2280" height="66" rx="12" fill="#173A59"/>
+  <text x="88" y="183" font-size="29" font-weight="700" fill="#FFFFFF">SYNTHETIC INPUTS  ·  SOFTWARE-ONLY  ·  NO NEURAL OR ECG DATA  ·  NO PHYSICAL MOVEMENT</text>
+
+  <rect x="48" y="225" width="2304" height="500" rx="20" fill="#FFFFFF" stroke="#CBD5DF" stroke-width="2"/>
+  <text x="72" y="270" class="section">ACTUAL SOFTWARE PATH</text>
+  <text x="72" y="301" class="tiny bold" fill="#173A59">Per-seed episode pairing is shuffled once (same across conditions) · each trial clears drive, ring state, and clock before classification</text>
+  <line x1="1515" y1="260" x2="1600" y2="260" class="software-line"/>
+  <text x="1620" y="268" class="small">solid arrow = software data / control</text>
+  <line x1="1985" y1="260" x2="2060" y2="260" class="self-line"/>
+  <text x="2080" y="268" class="small">dashed = self-check</text>
+
+  <!-- Two separate synthetic input branches -->
+  <rect x="70" y="322" width="245" height="114" rx="14" class="input"/>
+  <text x="90" y="355" class="small bold">SYNTHETIC INPUT A</text>
+  <text x="90" y="389" class="body">Generated membrane</text>
+  <text x="90" y="418" class="body">vectors / episode</text>
+  <path d="M315 379 H355" class="software-line"/>
+
+  <rect x="355" y="302" width="330" height="154" rx="16" class="node"/>
+  <text x="380" y="340" class="box-title">Membrane model</text>
+  <text x="380" y="378" class="body">Permission stage</text>
+  <text x="380" y="414" class="body">Emits or withholds</text>
+  <text x="380" y="443" class="body">an event (yes / no)</text>
+
+  <rect x="70" y="530" width="245" height="124" rx="14" class="input"/>
+  <text x="90" y="564" class="small bold">SYNTHETIC INPUT B</text>
+  <text x="90" y="599" class="body">Separate generated</text>
+  <text x="90" y="628" class="body">probe; not shared</text>
+  <path d="M315 590 H355" class="software-line"/>
+
+  <rect x="355" y="490" width="330" height="184" rx="16" class="node"/>
+  <text x="380" y="528" class="box-title">Command classifier</text>
+  <text x="380" y="565" class="body">Accept / reject + label:</text>
+  <text x="380" y="599" class="body bold">forward · reverse</text>
+  <text x="380" y="630" class="body bold">hold · rest</text>
+  <text x="380" y="659" class="small muted">Independent of Input A</text>
+
+  <!-- Two-input coordination -->
+  <path d="M685 379 H720 V440 H760" class="software-line"/>
+  <path d="M685 590 H720 V544 H760" class="software-line"/>
+  <rect x="760" y="390" width="270" height="215" rx="20" class="gate"/>
+  <text x="782" y="428" class="box-title">AND coordination</text>
+  <text x="782" y="465" class="small">Pass iff event = YES</text>
+  <text x="782" y="493" class="small bold">AND classifier = ACCEPT</text>
+  <text x="782" y="521" class="small">Else: NO-COMMAND</text>
+  <text x="782" y="548" class="tiny">Reject / unknown / malformed</text>
+  <text x="782" y="571" class="tiny">Missing / exception → drive = 0</text>
+  <text x="782" y="596" class="tiny bold" fill="#842029">NOT A SAFETY GUARANTEE</text>
+
+  <path d="M895 605 V653 H1045" class="software-line"/>
+  <text x="910" y="642" class="tiny bold">gate fails</text>
+  <rect x="1045" y="612" width="252" height="77" rx="14" fill="#FFF4DF" stroke="#805300" stroke-width="3"/>
+  <text x="1062" y="642" class="small bold">NO-COMMAND → DRIVE 0</text>
+  <text x="1062" y="672" class="tiny">Bypasses named mapping</text>
+  <path d="M1297 650 H1318 V570 H1340" class="software-line"/>
+
+  <!-- Command mapping and periodic update -->
+  <path d="M1030 440 H1045" class="software-line"/>
+  <rect x="1045" y="412" width="252" height="174" rx="16" class="node"/>
+  <text x="1066" y="450" class="box-title">Command mapping</text>
+  <text x="1066" y="486" class="small">forward → +1</text>
+  <text x="1066" y="516" class="small">reverse → −1</text>
+  <text x="1066" y="546" class="small">hold / rest → 0</text>
+  <text x="1066" y="574" class="tiny muted">classifier label → drive</text>
+
+  <path d="M1297 499 H1340" class="software-line"/>
+  <rect x="1340" y="412" width="265" height="174" rx="16" class="node"/>
+  <text x="1362" y="450" class="box-title">Periodic scheduler</text>
+  <text x="1362" y="488" class="body">Software clock</text>
+  <text x="1362" y="523" class="small">10 simulation steps / tick</text>
+  <text x="1362" y="557" class="small">Updates ring on ticks only</text>
+
+  <path d="M1605 499 H1650" class="software-line"/>
+  <rect x="1650" y="395" width="292" height="210" rx="16" class="node"/>
+  <text x="1673" y="433" class="box-title">Toy state: phase ring</text>
+  <text x="1673" y="471" class="body">In-memory, 64 sites</text>
+  <text x="1673" y="507" class="small">Phase state set from drive;</text>
+  <text x="1673" y="537" class="small">position updated on ticks</text>
+  <line x1="1673" y1="552" x2="1918" y2="552" stroke="#D2DBE3" stroke-width="2"/>
+  <text x="1673" y="580" class="tiny bold">Demo: 19.63 modeled ring sites</text>
+  <text x="1673" y="600" class="tiny">over 200 software-clock ticks</text>
+
+  <path d="M1942 499 H1980" class="software-line"/>
+  <rect x="1980" y="412" width="330" height="174" rx="16" class="node"/>
+  <text x="2004" y="450" class="box-title">Passive readout</text>
+  <text x="2004" y="490" class="body">k_est · mean gradient</text>
+  <text x="2004" y="525" class="body">· coherence</text>
+  <text x="2004" y="559" class="small muted">Derived from ring phases</text>
+
+  <!-- Explicit same-state self-check loop -->
+  <path d="M2145 586 V690 H1796 V608" class="self-line"/>
+  <rect x="1608" y="615" width="690" height="60" rx="10" fill="#FFF6EB" stroke="#9A4B00" stroke-width="2" stroke-dasharray="9 6"/>
+  <text x="1627" y="640" class="small bold" fill="#6F3900">INTERNAL SELF-CHECK: reads command-set phases</text>
+  <text x="1627" y="664" class="small bold" fill="#6F3900">Not independent brain / heart sensing</text>
+
+  <!-- Membrane-stage-only stress results -->
+  <rect x="48" y="752" width="2304" height="412" rx="20" fill="#FFF7F6" stroke="#9E2A2B" stroke-width="3"/>
+  <text x="75" y="793" font-size="31" font-weight="700" fill="#842029">COLLUSION STRESS TEST — VISIBLE FAILURE BOUNDARY</text>
+  <text x="75" y="827" class="small bold" fill="#5A2528">MEMBRANE PERMISSION STAGE ONLY · 500 synthetic episodes per condition (250 planted + 250 noise)</text>
+
+  <rect x="75" y="846" width="690" height="208" rx="14" class="failure-card"/>
+  <text x="98" y="882" class="box-title">Clean condition</text>
+  <text x="98" y="924" class="body">Planted-event detections: <tspan font-weight="700">246/250</tspan></text>
+  <text x="98" y="964" class="body">Noise activations: <tspan font-weight="700">0/250</tspan></text>
+  <text x="98" y="1013" class="small muted">Membrane-stage batch result</text>
+
+  <rect x="790" y="846" width="690" height="208" rx="14" class="failure-card"/>
+  <text x="813" y="882" class="box-title">Within-tolerance collusion</text>
+  <text x="813" y="916" class="small">1 colluding sensory member per column</text>
+  <text x="813" y="945" class="small">+ 1 colluding gate</text>
+  <text x="813" y="984" class="small">Planted detections: <tspan font-weight="700">127/250</tspan></text>
+  <text x="813" y="1018" class="small">Noise activations: <tspan font-weight="700">0/250</tspan></text>
+
+  <rect x="1505" y="846" width="812" height="208" rx="14" fill="#FDEBEC" stroke="#842029" stroke-width="5"/>
+  <text x="1530" y="879" font-size="27" font-weight="700" fill="#842029">BEYOND TOLERANCE</text>
+  <text x="1530" y="910" class="small">2 colluding sensory members per column</text>
+  <text x="1530" y="949" font-size="28" font-weight="700" fill="#842029">250/250 noise activations (100%)</text>
+  <text x="1530" y="985" class="small">Planted-event detections: <tspan font-weight="700">0/250</tspan></text>
+  <text x="1530" y="1025" class="small bold" fill="#842029">Membrane permission stage defeated in this setup</text>
+
+  <text x="75" y="1078" class="small bold">V1 PER-CLASS RATES: SUPERSEDED BY PAIRING BUG · Corrected v2: 1,200 trials · 40 paired seed clusters · 1,200/1,200 resets</text>
+  <text x="75" y="1108" class="small bold">VALID COMMANDS — Worst tested: within-tolerance colluding, 38/160 (23.8%; 95% paired-seed-cluster interval 18.1–30.0%)</text>
+  <text x="75" y="1138" class="small">NO-COMMAND / UNFAMILIAR — all six cells: 0/40 each; per-cell 95% Wilson upper bound 8.8%; not zero risk · NOT SAFETY VALIDATION</text>
+
+  <!-- Separate, muted biological-metaphor layer -->
+  <rect x="48" y="1180" width="2304" height="298" rx="20" fill="#EEF1F4" stroke="#697784" stroke-width="3" stroke-dasharray="14 9"/>
+  <text x="75" y="1224" font-size="29" font-weight="700" fill="#3D4B57">BIOLOGICAL METAPHORS — analogy only; not implemented or measured.</text>
+  <text x="75" y="1258" class="small muted">This explanatory layer is separate from the software path above.</text>
+
+  <rect x="75" y="1280" width="690" height="155" rx="14" class="analogy-card"/>
+  <text x="100" y="1328" font-size="30" font-weight="700" fill="#3D4B57">“Brain”</text>
+  <text x="100" y="1370" class="body muted">Metaphor for the membrane permission stage</text>
+  <text x="100" y="1407" class="small muted">No biological brain or neural signal is modeled.</text>
+
+  <rect x="790" y="1280" width="690" height="155" rx="14" class="analogy-card"/>
+  <text x="815" y="1328" font-size="30" font-weight="700" fill="#3D4B57">“Heart”</text>
+  <text x="815" y="1370" class="body muted">Metaphor for the periodic software clock</text>
+  <text x="815" y="1407" class="small muted">No heartbeat, ECG, or cardiac model is present.</text>
+
+  <rect x="1505" y="1280" width="812" height="155" rx="14" class="analogy-card"/>
+  <text x="1530" y="1328" font-size="30" font-weight="700" fill="#3D4B57">“Propulsion”</text>
+  <text x="1530" y="1370" class="body muted">Metaphor for command mapping + the toy phase ring</text>
+  <text x="1530" y="1407" class="small muted">No actuator, force, thrust, or physical motion is modeled.</text>
+</svg>

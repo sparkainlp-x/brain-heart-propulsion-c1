@@ -1,0 +1,100 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "Membrane Arena: a browser game about three coupled membranes, reward schemes, a shield, an amplifier and a stabilizer (SYNTHETIC classical simulation)"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+    affiliation: "Spark AI NLP, Fredericton, New Brunswick, Canada"
+version: 0.3.5
+date-released: 2026-10-26
+license: AGPL-3.0-only
+doi: "10.5281/zenodo.23633126"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23680525"
+    description: "Version 0.3.5"
+repository-code: "https://github.com/sparkainlp-x/membrane-arena"
+abstract: >-
+  SYNTHETIC educational game, zero dependencies, offline, English and French.
+  The player steers three coupled Oja-rule membranes that learn a planted
+  pattern in noise, chooses a reward scheme, a cooperation setting, a 2-of-3
+  shield, a capped amplifier and a gain-clamped stabilizer, and watches a
+  (1+1) evolution step. Scores are compared with the measured width-32 results
+  of the crystallization-contest repository. Includes a daily seeded contest,
+  a plain-text share card and challenge links. A Lab view plots the
+  simulation's own instruments with confidence intervals, runs multi-seed
+  ensembles and paired A/B tests against the repository baselines, and
+  replays any contest. A brain page sizes layers of membranes with the
+  2f + 1 rule and joins them with delayed links called microtubules (a
+  metaphor only; nothing models real neurons, microtubules or a brain), and
+  the Quorum Keeper logic game builds and breaks such fault-tolerant brains
+  against an exhaustive adversary. Reverse Membranes runs the arena backwards
+  at width 16: membranes with the learning sign flipped find a dark direction
+  whose energy was removed ("opposite energy" is only the name of a score;
+  nothing models negative energy, antimatter, physics or biology).
+  Reverse Pair joins a reverse observer and a predictable calibrator that
+  plays signed-amplitude sine tones on one clock, with an equalizer and a
+  2-membrane shield, and ships a frozen evaluation protocol: thresholds
+  tuned on calibration seeds, results on 120 held-out seeds with bootstrap
+  intervals, on-grid and off-grid fades, baselines, an oracle and a
+  regenerating script with SHA-256 hashes (nothing models oscillators or
+  radio hardware). Pair Watch turns Reverse Pair into a visual game where
+  the player is the second vote of the shield, with a logistic coach fitted
+  on calibration runs and frozen, evaluated under its own frozen protocol on
+  200 held-out runs, and replay codes checked by replaying the seed.
+  Wave Pulse keeps the v0.3.4 locator and point estimate, and adds per-setting
+  cost allowances for its nominal 90% region. These were fitted on 200 new
+  calibration pulses and evaluated on 400 fresh held-out pulses per setting
+  under a separate frozen protocol. The experimental result is mixed: 11 of
+  16 per-setting Wilson intervals contain 90%, default coverage is 85.8%
+  [82.0%, 88.8%], and one setting has no finite region after 20 of 200
+  calibration pulses fell back. This does not establish 90% coverage across
+  all settings; no real floor, pressure waves or holography are modeled.
+  Classical simulation only.
+keywords:
+  - "scientific-reasoning"
+  - "oja-rule"
+  - "reward-schemes"
+  - "evolution-strategies"
+  - "education"
+  - "synthetic"
+  - "javascript"
+  - "fault-tolerance"
+  - "logic-game"
+  - "anti-hebbian-learning"
+  - "reproducibility"
+  - "calibration"
+  - "probability-calibration"
+  - "wave-equation"
+  - "source-localization"
+references:
+  - type: article
+    title: "Simplified neuron model as a principal component analyzer"
+    authors:
+      - family-names: "Oja"
+        given-names: "Erkki"
+    year: 1982
+    journal: "Journal of Mathematical Biology"
+    volume: 15
+    issue: "3"
+    start: 267
+    end: 273
+    doi: "10.1007/BF00275687"
+  - type: software
+    title: "crystallization-contest"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    version: 0.1.0
+    doi: "10.5281/zenodo.23619515"
+    repository-code: "https://github.com/sparkainlp-x/crystallization-contest"
+    notes: "Source of the contest mechanics and of every baseline number shown in the game (concept DOI 10.5281/zenodo.23619514)."
+  - type: software
+    title: "membrane-crystallization"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    version: 0.1.0
+    doi: "10.5281/zenodo.23583050"

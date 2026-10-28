@@ -1,0 +1,318 @@
+{
+  "amendment": "c1-v2-reporting-test-amendment/1",
+  "amendment_scope": "Additive reporting and regression coverage only; frozen v2 protocol, evaluator, raw trials, and original report remain unchanged.",
+  "cluster_interval": "two-sided 95% Clopper-Pearson exact binomial interval for the fraction of independent seed clusters with at least one event in the stated opportunity set",
+  "independence_unit": "seed_cluster",
+  "no_command_by_condition_and_probe_family": [
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "clean",
+      "condition_label": "Clean",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "unfamiliar_random",
+      "scope": "Clean \u00d7 unfamiliar_random",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "clean",
+      "condition_label": "Clean",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "no_command",
+      "scope": "Clean \u00d7 no_command",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "within_tolerance_colluding",
+      "condition_label": "Within-tolerance colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "unfamiliar_random",
+      "scope": "Within-tolerance colluding \u00d7 unfamiliar_random",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "within_tolerance_colluding",
+      "condition_label": "Within-tolerance colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "no_command",
+      "scope": "Within-tolerance colluding \u00d7 no_command",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "beyond_tolerance_colluding",
+      "condition_label": "Beyond-tolerance colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "unfamiliar_random",
+      "scope": "Beyond-tolerance colluding \u00d7 unfamiliar_random",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "beyond_tolerance_colluding",
+      "condition_label": "Beyond-tolerance colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 40,
+      "probe_family": "no_command",
+      "scope": "Beyond-tolerance colluding \u00d7 no_command",
+      "seed_clusters_with_one_or_more_events": 0
+    }
+  ],
+  "primary_beyond_tolerance_false_refusal": {
+    "cluster_event_fraction": 0.0,
+    "cluster_event_fraction_exact_binomial_95": [
+      0.0,
+      0.088097
+    ],
+    "condition": "beyond_tolerance_colluding",
+    "event_field": "false_refusal",
+    "event_seed_clusters": [],
+    "independent_seed_clusters": 40,
+    "label": "Beyond-tolerance colluding",
+    "observed_events": 0,
+    "observed_trial_event_fraction": 0.0,
+    "observed_trials": 160,
+    "opportunities_per_seed_cluster": 4,
+    "scope": "Beyond-tolerance colluding \u00d7 valid directional probes (forward/reverse)",
+    "seed_clusters_with_one_or_more_events": 0
+  },
+  "primary_no_command_by_condition": [
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "clean",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Clean",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 80,
+      "scope": "Clean \u00d7 both expected-no-command probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "within_tolerance_colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Within-tolerance colluding",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 80,
+      "scope": "Within-tolerance colluding \u00d7 both expected-no-command probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "beyond_tolerance_colluding",
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Beyond-tolerance colluding",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 80,
+      "scope": "Beyond-tolerance colluding \u00d7 both expected-no-command probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    }
+  ],
+  "primary_valid_wrong_command_by_condition": [
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "clean",
+      "event_field": "wrong_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Clean",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 320,
+      "scope": "Clean \u00d7 all eight valid probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "within_tolerance_colluding",
+      "event_field": "wrong_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Within-tolerance colluding",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 320,
+      "scope": "Within-tolerance colluding \u00d7 all eight valid probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "condition": "beyond_tolerance_colluding",
+      "event_field": "wrong_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "label": "Beyond-tolerance colluding",
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 320,
+      "scope": "Beyond-tolerance colluding \u00d7 all eight valid probe families",
+      "seed_clusters_with_one_or_more_events": 0
+    }
+  ],
+  "sensitivity_all_conditions_no_command": {
+    "cluster_event_fraction": 0.0,
+    "cluster_event_fraction_exact_binomial_95": [
+      0.0,
+      0.088097
+    ],
+    "event_field": "action_on_expected_no_command",
+    "event_seed_clusters": [],
+    "independent_seed_clusters": 40,
+    "observed_events": 0,
+    "observed_trial_event_fraction": 0.0,
+    "observed_trials": 240,
+    "scope": "Sensitivity pool: all conditions \u00d7 both no-command probe families",
+    "seed_clusters_with_one_or_more_events": 0
+  },
+  "sensitivity_all_conditions_valid_wrong_command": {
+    "cluster_event_fraction": 0.0,
+    "cluster_event_fraction_exact_binomial_95": [
+      0.0,
+      0.088097
+    ],
+    "event_field": "wrong_command",
+    "event_seed_clusters": [],
+    "independent_seed_clusters": 40,
+    "observed_events": 0,
+    "observed_trial_event_fraction": 0.0,
+    "observed_trials": 960,
+    "scope": "Sensitivity pool: all conditions \u00d7 all valid probe families",
+    "seed_clusters_with_one_or_more_events": 0
+  },
+  "sensitivity_no_command_by_probe_family": [
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 120,
+      "probe_family": "unfamiliar_random",
+      "scope": "Sensitivity pool: unfamiliar_random across all conditions",
+      "seed_clusters_with_one_or_more_events": 0
+    },
+    {
+      "cluster_event_fraction": 0.0,
+      "cluster_event_fraction_exact_binomial_95": [
+        0.0,
+        0.088097
+      ],
+      "event_field": "action_on_expected_no_command",
+      "event_seed_clusters": [],
+      "independent_seed_clusters": 40,
+      "observed_events": 0,
+      "observed_trial_event_fraction": 0.0,
+      "observed_trials": 120,
+      "probe_family": "no_command",
+      "scope": "Sensitivity pool: no_command across all conditions",
+      "seed_clusters_with_one_or_more_events": 0
+    }
+  ],
+  "source_data_sha256": "8363362e3a84b4acda5936e2b92957659e831cbe16b8a0de62972aa4dd14a3e9",
+  "source_protocol": "c1-end-to-end-evaluation/2",
+  "worst_tested_correct_command": {
+    "condition": "within_tolerance_colluding",
+    "label": "Within-tolerance colluding",
+    "observations": 160,
+    "rate": 0.2375,
+    "seed_cluster_bootstrap_95": [
+      0.18125,
+      0.3
+    ],
+    "seed_clusters": 40,
+    "successes": 38
+  }
+}

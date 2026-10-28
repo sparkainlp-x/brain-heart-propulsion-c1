@@ -1,0 +1,19 @@
+{
+  "protocol": "c1-end-to-end-evaluation/1",
+  "status": "FROZEN_BEFORE_DATA_GENERATION",
+  "frozen_at_utc": "2026-10-28T01:45:15.713889+00:00",
+  "data_generated_at_utc": null,
+  "sha256": {
+    "END_TO_END_PROTOCOL.md": "658e1c2d724ec32370ffa7c9ba91010fe7d3b33ebe0d037b6cb57bc1950dd7f8",
+    "evaluate_c1_e2e.py": "d9294c93426a4e649263ee20e6e70396d4bdd7092f29d78583f8bd1d85eeeb94",
+    "e2e_membrane_batch.js": "61333190206e13db25fd7260d5323093758cfff4e60255feaa0fd6ac7dd07abf",
+    "brain_propulsion.py": "d9309b9b79e2ef660bcb2f643a4fd3c65520de16e25d0e0fec46c93aa547204d",
+    "brain.js": "96e0d501eff343f96c0a02530346bb7f8f832e1f5eff95ea6d79a4524d60c62d",
+    "game.js": "077fa7ca6ce5fb62ed51b87a7bdb32c4b6bc79c5c569d49a4c4d4abfb716dc03",
+    "baselines.js": "8cc111142a15ef88fe7f3c803b076cd58d241b2086781acbf5a8614e98bf3d26",
+    "stats.js": "4888059280e9a449824776c6e1f407178e76c3ea38c7bbefc583716c87f2922e",
+    "brain-i18n.js": "833f45e35a9b08847023d30b9a1d1bbcede2eeddd0f5d641afd50856f6160be9",
+    "propulsion/linked.py": "16a86a73263e461fc9189c649cecf510f326df061089de06893bd0054071c3d4"
+  },
+  "manifest_sha256": "2ec3675495c8438da33ce4e9a1e48ec1f22892efbc7876c3f3d55ced75639488"
+}

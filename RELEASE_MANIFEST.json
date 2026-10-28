@@ -1,0 +1,408 @@
+{
+  "manifest_version": "1.0",
+  "package": "brain-heart-propulsion-c1",
+  "repository_target": "sparkainlp-x/brain-heart-propulsion-c1",
+  "release_status": "source repository payload; no tagged release or DOI",
+  "archive_root": "brain-heart-propulsion-c1/",
+  "declared_license": "AGPL-3.0-only",
+  "license_records": [
+    {
+      "path": "LICENSE",
+      "role": "canonical root license file",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "LICENSE.brain",
+      "role": "retained root source-package license notice",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "path": "propulsion/LICENSE",
+      "role": "retained Brain Heart Propulsion package license notice",
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "note": "The two original files LICENSE.brain and propulsion/LICENSE are byte-identical; the canonical LICENSE copy is identical too."
+    }
+  ],
+  "upstream_sources": [
+    {
+      "name": "Membrane Arena",
+      "version": "0.3.5",
+      "license": "AGPL-3.0-only",
+      "repository": "https://github.com/sparkainlp-x/membrane-arena",
+      "citation_record_in_payload": "provenance/membrane-arena/CITATION.cff",
+      "copied_component_paths": [
+        "baselines.js",
+        "brain-i18n.js",
+        "brain.js",
+        "game.js",
+        "stats.js",
+        "tests/brain.test.js"
+      ],
+      "notice": "Copied component source headers are retained; the citation record was copied verbatim."
+    },
+    {
+      "name": "Brain Heart Propulsion",
+      "version": "0.1.0",
+      "license": "AGPL-3.0-only",
+      "citation_record_in_payload": "propulsion/CITATION.cff",
+      "license_record_in_payload": "propulsion/LICENSE",
+      "component_path_prefix": "propulsion/",
+      "notice": "Package-local citation/license and package documentation are retained."
+    },
+    {
+      "name": "C1 integration and experiment artifacts",
+      "license": "AGPL-3.0-only",
+      "notice": "Derived integration code, frozen experiment records, raw data, reports, tests, and release documentation are listed individually below."
+    }
+  ],
+  "preservation_notes": [
+    "Both frozen v1/v2 protocol records, hash records, and freeze JSON files are included unchanged.",
+    "Raw evaluation JSON and original v1/v2 reports are included unchanged; the additive reporting-amendment outputs remain separate.",
+    "Existing source archives remain outside this repository payload and are not modified; archive preservation hashes are recorded in the external validation note.",
+    "Generated Python bytecode caches and runtime debris are excluded."
+  ],
+  "control_files": {
+    "RELEASE_MANIFEST.json": "This file; inventories every non-control payload file with path, byte count, SHA-256, provenance, and license.",
+    "SHA256SUMS": "Generated hash list covering every file in the release tree except SHA256SUMS itself; includes this manifest."
+  },
+  "included_files": [
+    {
+      "path": "END_TO_END_FREEZE.json",
+      "size_bytes": 1195,
+      "sha256": "9b6619524713ef8162dd462ef00bdbd29aed81428496c96255625e94e1a66022",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "END_TO_END_FREEZE_V2.json",
+      "size_bytes": 1505,
+      "sha256": "b77855badd8b5333d05368ea1a6366faeb117587bdc7e2f0a625bf81d535dad6",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "END_TO_END_PROTOCOL.md",
+      "size_bytes": 3788,
+      "sha256": "658e1c2d724ec32370ffa7c9ba91010fe7d3b33ebe0d037b6cb57bc1950dd7f8",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "END_TO_END_PROTOCOL.sha256",
+      "size_bytes": 818,
+      "sha256": "2ec3675495c8438da33ce4e9a1e48ec1f22892efbc7876c3f3d55ced75639488",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "END_TO_END_PROTOCOL_V2.md",
+      "size_bytes": 3982,
+      "sha256": "54a3845ba688ddf68461a89398fb85f4f0dd289666935ecfd649da22933209de",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "END_TO_END_PROTOCOL_V2.sha256",
+      "size_bytes": 1101,
+      "sha256": "6ec64601cfe9790dd1f65ca4621650c160d357a94b22f9e918a130b9741565fd",
+      "provenance": "Frozen C1 experiment protocol/freeze/hash record copied unchanged from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "EVALUATION.md",
+      "size_bytes": 3125,
+      "sha256": "c22da978245c9cd9d2f1e5d34bd9d8fdc7c99e956354f0a21422961a4be5ddb6",
+      "provenance": "Preserved C1 report/evaluation document copied from the selected source package; original reports were not rewritten.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "provenance": "Canonical root license copy made from the retained C1 package root LICENSE.brain; identical text.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "LICENSE.brain",
+      "size_bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "provenance": "Original root license text retained from the selected C1 source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 11042,
+      "sha256": "0da68ba672d1e5f589e7dd20ab362543175a17eea32eb7f0bf32fd85d0edce88",
+      "provenance": "C1 release documentation based on the selected source package; stale test totals corrected, and license/provenance section added.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "REPORTING_TEST_AMENDMENT.md",
+      "size_bytes": 3608,
+      "sha256": "180fd8e3da209552aaf13e798126f4417ddd2c300d3666fe3a81b5b72eb95094",
+      "provenance": "C1 local amendment record based on the selected source package; stale reporting-test count corrected.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "baselines.js",
+      "size_bytes": 4176,
+      "sha256": "8cc111142a15ef88fe7f3c803b076cd58d241b2086781acbf5a8614e98bf3d26",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "brain-i18n.js",
+      "size_bytes": 16642,
+      "sha256": "833f45e35a9b08847023d30b9a1d1bbcede2eeddd0f5d641afd50856f6160be9",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "brain.js",
+      "size_bytes": 35680,
+      "sha256": "96e0d501eff343f96c0a02530346bb7f8f832e1f5eff95ea6d79a4524d60c62d",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "brain_propulsion.py",
+      "size_bytes": 10029,
+      "sha256": "d9309b9b79e2ef660bcb2f643a4fd3c65520de16e25d0e0fec46c93aa547204d",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "brain_trial.js",
+      "size_bytes": 1536,
+      "sha256": "a71f543a01cfda1730d02c0e6d73131bdbc67bcd204df4b4b2ca1fc67c650b59",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "diagrams/c1-control-flow.png",
+      "size_bytes": 1317430,
+      "sha256": "870e0d334f9fa1bba8d722b230170c2e459aa1f2731fbc2733f45bc1ab9c1649",
+      "provenance": "C1 integration diagram/accessibility artifact copied from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "diagrams/c1-control-flow.svg",
+      "size_bytes": 13307,
+      "sha256": "1f2af3ce945e03886b859c3715ff98aaf5813d94800b710463ead0ad2cf70df6",
+      "provenance": "C1 integration diagram/accessibility artifact copied from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "diagrams/c1-diagram-accessibility.md",
+      "size_bytes": 4266,
+      "sha256": "4b640bf749c0a67ccf38c8e25bdfc5b3c2a9f3faae7461d91823118d7a6a4e8e",
+      "provenance": "C1 integration diagram/accessibility artifact copied from the selected source package.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "e2e_membrane_batch.js",
+      "size_bytes": 1850,
+      "sha256": "61333190206e13db25fd7260d5323093758cfff4e60255feaa0fd6ac7dd07abf",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_evaluation.json",
+      "size_bytes": 1264497,
+      "sha256": "f2dfba05fe6fcafc50677a8547e0d2a66fa3c8dab6ac8b35d341179dfa7e572f",
+      "provenance": "Preserved C1 synthetic experiment output/raw JSON copied from the selected source package; not regenerated for this release.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_evaluation_v2.json",
+      "size_bytes": 1311226,
+      "sha256": "8363362e3a84b4acda5936e2b92957659e831cbe16b8a0de62972aa4dd14a3e9",
+      "provenance": "Preserved C1 synthetic experiment output/raw JSON copied from the selected source package; not regenerated for this release.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_report.md",
+      "size_bytes": 6174,
+      "sha256": "d2487990a1304b1357669c58b6d757ebe6024721c55f5cd1dd1b0b1cd0c78ddc",
+      "provenance": "Preserved C1 report/evaluation document copied from the selected source package; original reports were not rewritten.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_report_v2.md",
+      "size_bytes": 8261,
+      "sha256": "09a29bce1ada6fba2faa262b905198bdd1e55a698534e17878dbae135d1cc00e",
+      "provenance": "Preserved C1 report/evaluation document copied from the selected source package; original reports were not rewritten.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_report_v2_reporting_amendment.md",
+      "size_bytes": 4755,
+      "sha256": "b629f277a12ecb28278e7a04d2bca0fbe96dc08bedbed273854422907d3e66ea",
+      "provenance": "Preserved C1 report/evaluation document copied from the selected source package; original reports were not rewritten.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "end_to_end_reporting_amendment_v2.json",
+      "size_bytes": 10833,
+      "sha256": "d246f25f9a751c1025822ea98ed1693171206e890b9eac7c142e141c62fb6fb9",
+      "provenance": "Preserved C1 synthetic experiment output/raw JSON copied from the selected source package; not regenerated for this release.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "evaluate_c1.js",
+      "size_bytes": 3807,
+      "sha256": "578bb845074e1017188e8a57f6ebe36e4c2616b94acf099d984712463f0a22d9",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "evaluate_c1_e2e.py",
+      "size_bytes": 28497,
+      "sha256": "d9294c93426a4e649263ee20e6e70396d4bdd7092f29d78583f8bd1d85eeeb94",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "evaluate_c1_e2e_v2.py",
+      "size_bytes": 30318,
+      "sha256": "43065b3ee988e0df1467793a23a668c5cd0e40646b53e241c44d568b26e5ca69",
+      "provenance": "C1 integration/evaluation source copied from the selected source package; the v2 frozen evaluator validates its frozen inputs.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "evaluation.json",
+      "size_bytes": 8334,
+      "sha256": "688ab2b693c4da58c2c806a28fd369df883894c9c65ca078b0a6708305e412c5",
+      "provenance": "Preserved C1 synthetic experiment output/raw JSON copied from the selected source package; not regenerated for this release.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "game.js",
+      "size_bytes": 27489,
+      "sha256": "077fa7ca6ce5fb62ed51b87a7bdb32c4b6bc79c5c569d49a4c4d4abfb716dc03",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/CITATION.cff",
+      "size_bytes": 617,
+      "sha256": "8f180fa55ce6048101ff4e12ef824800c5a1b8c881b67d9c25c3376f55005a45",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/DESIGN.md",
+      "size_bytes": 1931,
+      "sha256": "260c489c2b507b50ede533da1c4733b3ccb73158da0fe2e6326b26ac831f2770",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/LICENSE",
+      "size_bytes": 34523,
+      "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/PREREG.md",
+      "size_bytes": 1949,
+      "sha256": "61f57751d6cc87358c321bd3723e71b4e4b9cfc3f4e6fce5755aabbd7f36bfe1",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/README.md",
+      "size_bytes": 3006,
+      "sha256": "b7dade2cfaf3e95610db561f95748f5067603afbf84d32bee299d30b4f802388",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/demo.py",
+      "size_bytes": 1597,
+      "sha256": "e4614f1958411dd63496005cbb5d436fa3eb4fc43f985262b18aa3f6739e501b",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/linked.py",
+      "size_bytes": 11017,
+      "sha256": "16a86a73263e461fc9189c649cecf510f326df061089de06893bd0054071c3d4",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "propulsion/tests.py",
+      "size_bytes": 3258,
+      "sha256": "7d7a89591d13115bc335764a08b2c37c7c4fa824a6a0f0879798439f4879af58",
+      "provenance": "Brain Heart Propulsion v0.1.0 extracted package; the original package-local citation and license records are retained.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "provenance/membrane-arena/CITATION.cff",
+      "size_bytes": 4617,
+      "sha256": "ad5075fdc6674b6715477c959f5f1fd0942d53626ba5427a44694c36d205a8ea",
+      "provenance": "Verbatim upstream citation record from Membrane Arena v0.3.5.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "reporting_amendment_v2.py",
+      "size_bytes": 22157,
+      "sha256": "aa23068164d5c1e9a599da9871d6c63fd7dd8751a56066b56170b5c3077481c3",
+      "provenance": "Additive C1 reporting amendment/regression artifact from the selected source package; separate from frozen v2 source/test hashes.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "stats.js",
+      "size_bytes": 5378,
+      "sha256": "4888059280e9a449824776c6e1f407178e76c3ea38c7bbefc583716c87f2922e",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/brain.test.js",
+      "size_bytes": 16612,
+      "sha256": "7550c90f11f0b6ac9587a2c46ee88f58274b6ac4eb5d3961ff6cd5b814d713a4",
+      "provenance": "Copied verbatim from Membrane Arena v0.3.5; SHA-256 matches the upstream workspace file.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/test_c1_connector.py",
+      "size_bytes": 8161,
+      "sha256": "a07114550188582a4bf3d19b042c36b169602872b41f091bd83a96fff46fa4b0",
+      "provenance": "C1 test artifact copied from the selected source package; v2-frozen test hashes are verified by the frozen evaluator.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/test_c1_none_classifier_regression.py",
+      "size_bytes": 1391,
+      "sha256": "2908c8a2ecf6cda946d75c61310ddf49ea261e1528b8c89870f00ae18e912874",
+      "provenance": "Additive C1 reporting amendment/regression artifact from the selected source package; separate from frozen v2 source/test hashes.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/test_e2e_eval.py",
+      "size_bytes": 4226,
+      "sha256": "e05dd13d4cf4eaade5eff327ee31f92fd5e43a917cb905e9147672b1840d4309",
+      "provenance": "C1 test artifact copied from the selected source package; v2-frozen test hashes are verified by the frozen evaluator.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/test_e2e_v2_pairing.py",
+      "size_bytes": 1432,
+      "sha256": "01d273ebc719311ce3f560a77a74ddec48c5234ca114fe4ca342e6a232c8a289",
+      "provenance": "C1 test artifact copied from the selected source package; v2-frozen test hashes are verified by the frozen evaluator.",
+      "license": "AGPL-3.0-only"
+    },
+    {
+      "path": "tests/test_reporting_amendment_v2.py",
+      "size_bytes": 5566,
+      "sha256": "65f2f4aba77021ad867a1d5eabb2457a0058d781082ee1980e8c11f067159f06",
+      "provenance": "Additive C1 reporting amendment/regression artifact from the selected source package; separate from frozen v2 source/test hashes.",
+      "license": "AGPL-3.0-only"
+    }
+  ]
+}

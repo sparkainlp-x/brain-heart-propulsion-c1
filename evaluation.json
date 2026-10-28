@@ -1,0 +1,322 @@
+{
+  "protocol": "brain-heart-propulsion-c1-membrane-evaluation/1",
+  "synthetic": true,
+  "purpose": "Measure the copied membrane-brain event stage; propulsion direction is classified separately by the Python toy.",
+  "design": {
+    "brainVersion": "0.3.5",
+    "architecture": {
+      "perColumn": 3,
+      "columns": 3,
+      "integrators": 1,
+      "stabilizer": false,
+      "memory": false,
+      "fuse": true,
+      "delays": {
+        "sg": 0,
+        "gi": 0,
+        "io": 0
+      },
+      "jitter": 0,
+      "th": 0.5,
+      "c": 0,
+      "g": 1
+    },
+    "replicates": 5,
+    "episodesPerReplicate": 100,
+    "totalEpisodesPerScenario": 500,
+    "interval": "95% Wilson score interval",
+    "groundTruthUsedFor": "scoring only; never used as the membrane gate",
+    "composition": "C1 requires this event plus independent acceptance by the propulsion package classifier.",
+    "limitations": [
+      "Generated toy vectors only; not biological or hardware data.",
+      "The batch rates describe only the membrane event stage, not end-to-end C1 motion.",
+      "Episodes are outputs of a deterministic software model; intervals are descriptive model-frequency intervals.",
+      "The fault scenarios are chosen simulations, not estimates of real fault rates.",
+      "An output event is only an imposed permission bit; it does not encode direction."
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "clean",
+      "faults": {
+        "mode": "collude"
+      },
+      "counts": {
+        "episodes": 500,
+        "planted": 250,
+        "noise": 250,
+        "trueOutputs": 246,
+        "falseOnPlanted": 0,
+        "falseOnNoise": 0
+      },
+      "rates": {
+        "trueEventRecallOnPlanted": {
+          "p": 0.984,
+          "lo": 0.9595901903879592,
+          "hi": 0.9937607754728484,
+          "n": 250
+        },
+        "falseOutputOnPlanted": {
+          "p": 0,
+          "lo": 8.542356928325963e-19,
+          "hi": 0.015133299730570737,
+          "n": 250
+        },
+        "falseActivationOnNoise": {
+          "p": 0,
+          "lo": 8.542356928325963e-19,
+          "hi": 0.015133299730570737,
+          "n": 250
+        },
+        "allOutputActivations": {
+          "p": 0.492,
+          "lo": 0.44840780574849165,
+          "hi": 0.5357141837008031,
+          "n": 500
+        }
+      },
+      "membraneEventGate": {
+        "totalEpisodes": 500,
+        "eventActivations": 246,
+        "noEventEpisodes": 254,
+        "note": "This is the first-stage event rate only; C1 motion also requires separate classifier acceptance."
+      },
+      "perSeed": [
+        {
+          "seed": "c1-eval-1",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 50,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-2",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 49,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-3",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 50,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-4",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 48,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-5",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 49,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        }
+      ]
+    },
+    {
+      "id": "within-tolerance-colluding",
+      "faults": {
+        "sensory": 1,
+        "columns": 1,
+        "mode": "collude"
+      },
+      "counts": {
+        "episodes": 500,
+        "planted": 250,
+        "noise": 250,
+        "trueOutputs": 127,
+        "falseOnPlanted": 0,
+        "falseOnNoise": 0
+      },
+      "rates": {
+        "trueEventRecallOnPlanted": {
+          "p": 0.508,
+          "lo": 0.44637794939431846,
+          "hi": 0.5693799178099924,
+          "n": 250
+        },
+        "falseOutputOnPlanted": {
+          "p": 0,
+          "lo": 8.542356928325963e-19,
+          "hi": 0.015133299730570737,
+          "n": 250
+        },
+        "falseActivationOnNoise": {
+          "p": 0,
+          "lo": 8.542356928325963e-19,
+          "hi": 0.015133299730570737,
+          "n": 250
+        },
+        "allOutputActivations": {
+          "p": 0.254,
+          "lo": 0.21782025464593927,
+          "hi": 0.2939309209198709,
+          "n": 500
+        }
+      },
+      "membraneEventGate": {
+        "totalEpisodes": 500,
+        "eventActivations": 127,
+        "noEventEpisodes": 373,
+        "note": "This is the first-stage event rate only; C1 motion also requires separate classifier acceptance."
+      },
+      "perSeed": [
+        {
+          "seed": "c1-eval-1",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 22,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-2",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 27,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-3",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 25,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-4",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 28,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        },
+        {
+          "seed": "c1-eval-5",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 25,
+          "falseOnPlanted": 0,
+          "falseOnNoise": 0
+        }
+      ]
+    },
+    {
+      "id": "over-tolerance-sensory-colluding",
+      "faults": {
+        "sensory": 2,
+        "mode": "collude"
+      },
+      "counts": {
+        "episodes": 500,
+        "planted": 250,
+        "noise": 250,
+        "trueOutputs": 0,
+        "falseOnPlanted": 250,
+        "falseOnNoise": 250
+      },
+      "rates": {
+        "trueEventRecallOnPlanted": {
+          "p": 0,
+          "lo": 8.542356928325963e-19,
+          "hi": 0.015133299730570737,
+          "n": 250
+        },
+        "falseOutputOnPlanted": {
+          "p": 1,
+          "lo": 0.9848667002694291,
+          "hi": 0.9999999999999998,
+          "n": 250
+        },
+        "falseActivationOnNoise": {
+          "p": 1,
+          "lo": 0.9848667002694291,
+          "hi": 0.9999999999999998,
+          "n": 250
+        },
+        "allOutputActivations": {
+          "p": 1,
+          "lo": 0.9923756594190852,
+          "hi": 1,
+          "n": 500
+        }
+      },
+      "membraneEventGate": {
+        "totalEpisodes": 500,
+        "eventActivations": 500,
+        "noEventEpisodes": 0,
+        "note": "This is the first-stage event rate only; C1 motion also requires separate classifier acceptance."
+      },
+      "perSeed": [
+        {
+          "seed": "c1-eval-1",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 0,
+          "falseOnPlanted": 50,
+          "falseOnNoise": 50
+        },
+        {
+          "seed": "c1-eval-2",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 0,
+          "falseOnPlanted": 50,
+          "falseOnNoise": 50
+        },
+        {
+          "seed": "c1-eval-3",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 0,
+          "falseOnPlanted": 50,
+          "falseOnNoise": 50
+        },
+        {
+          "seed": "c1-eval-4",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 0,
+          "falseOnPlanted": 50,
+          "falseOnNoise": 50
+        },
+        {
+          "seed": "c1-eval-5",
+          "episodes": 100,
+          "planted": 50,
+          "noise": 50,
+          "trueOutputs": 0,
+          "falseOnPlanted": 50,
+          "falseOnNoise": 50
+        }
+      ]
+    }
+  ]
+}
